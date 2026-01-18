@@ -1,0 +1,144 @@
+ .skill-form.project-add-wrapper {
+  padding: 2rem;
+  background: #f4f6fb;
+
+  overflow-y: auto;
+  /* ✅ yahi scroll hoga */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+ .skill-form.project-card {
+  width: 100%;
+  max-width: 900px;
+  ;
+  margin: 0;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+ .skill-form.project-card h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* form */
+ .skill-form.form-group {
+  margin-bottom: 20px;
+}
+
+ .skill-form.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+ .skill-form.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  transition: 0.3s;
+}
+
+ .skill-form.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+ .skill-form.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5a6ff0;
+  box-shadow: 0 0 0 3px rgba(90, 111, 240, 0.15);
+}
+
+/* upload */
+ .skill-form.upload-box {
+  border: 2px dashed #bfc6ff;
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f8f9ff;
+  color: #5a6ff0;
+}
+
+ .skill-form.preview-img {
+  margin-top: 12px;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.skill-form.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* button */
+ .skill-form.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #5a6ff0, #7f8cff);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ .skill-form.submit-btn:hover {
+  box-shadow: 0 10px 25px rgba(90, 111, 240, 0.35);
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 1024px) {
+  .skill-form.project-card {
+    max-width: 800px;
+  }
+}
+
+
+@media (max-width: 768px) {
+ .skill-form .project-add-wrapper {
+    padding: 1rem;
+  }
+
+ .skill-form .project-card {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+ .skill-form .project-card h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+ .skill-form .project-card {
+    padding: 18px;
+  }
+
+  .skill-form.submit-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,141 @@
+.about-section {
+  padding: 100px 60px;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* IMAGE AREA */
+.about-images {
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
+}
+
+.experience-box {
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+  text-align: center;
+}
+
+.experience-box h2 {
+  color: #455aff;
+  font-size: 28px;
+}
+
+/* CONTENT */
+.about-tag {
+  display: inline-block;
+  background: white;
+  color: #455aff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.about-content h2 span {
+ color:#455aff;
+}
+
+.about-desc {
+  margin: 18px 0 24px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* BIO CARD */
+.bio-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+  margin-bottom: 22px;
+}
+
+.bio-card div {
+  font-size: 14px;
+  color: #334155;
+}
+
+/* BUTTON */
+.about-btn {
+  display: inline-block;
+  background: #455aff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 12px 30px rgba(255, 122, 69, 0.4);
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* STATS */
+.about-stats {
+  max-width: 1000px;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.stat-box h3 {
+  font-size: 28px;
+  color: #455aff;
+}
+
+.stat-box p {
+  color: #475569;
+  margin-top: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+

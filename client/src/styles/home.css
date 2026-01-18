@@ -1,0 +1,153 @@
+
+/* PAGE */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc, #f1f5f9);
+  color: #0f172a;
+  
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px 64px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+/* TEXT */
+.hero-intro {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #14b8a6;
+  font-weight: 600;
+}
+
+
+
+.hero-name {
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.hero-surname {
+  font-weight: 400;
+  color: #334155;
+}
+
+.hero-title {
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+
+.hero-dash {
+  font-weight: 300;
+  color: #94a3b8;
+  margin: 0 6px;
+}
+
+/* TYPING TEXT */
+.typing-text {
+  font-weight: 600;
+  background: linear-gradient(90deg, #4f46e5, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPTION */
+.hero-desc {
+  margin-top: 16px;
+  color: #475569;
+  max-width: 520px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4f46e5, #14b8a6);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  border: 1px solid #cbd5f5;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+/* SOCIAL */
+.social-icons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: #475569;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #14b8a6;
+}
+
+/* IMAGE */
+.hero-image .image-card {
+  background: linear-gradient(to bottom right, #eef2ff, #f5f3ff);
+  padding: 24px;
+  max-width: 500px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons,
+  .social-icons {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-desc {
+    margin: auto;
+  }
+}

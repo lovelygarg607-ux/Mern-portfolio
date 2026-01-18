@@ -1,0 +1,145 @@
+.project-add-wrapper {
+  padding: 2rem;
+  background: #f4f6fb;
+
+  overflow-y: auto;
+  /* ✅ yahi scroll hoga */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.project-card {
+  width: 100%;
+  max-width: 900px;
+  ;
+  margin: 0;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  transition: 0.3s;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5a6ff0;
+  box-shadow: 0 0 0 3px rgba(90, 111, 240, 0.15);
+}
+
+/* upload */
+.upload-box {
+  border: 2px dashed #bfc6ff;
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f8f9ff;
+  color: #5a6ff0;
+}
+
+.preview-img {
+  margin-top: 12px;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #5a6ff0, #7f8cff);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 10px 25px rgba(90, 111, 240, 0.35);
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 1024px) {
+  .project-card {
+    max-width: 800px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .project-add-wrapper {
+    padding: 1rem;
+  }
+
+  .project-card {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .project-card h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 18px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
