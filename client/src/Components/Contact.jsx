@@ -39,17 +39,16 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-     axios.post(
-  "https://mern-portfolio-d3xy.onrender.com/portfolio/contact/message",
-  formData
-);
-        {
-           headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        }
-      );
+ try {
+  const contactresponse = await axios.post(
+    "https://mern-portfolio-d3xy.onrender.com/portfolio/contact/message",
+    formData,
+    {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+  );
 
       if (contactresponse.data.status === "success") {
         Swal.fire({
