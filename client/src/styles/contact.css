@@ -235,5 +235,18 @@
 }
 
 
+@media (max-width: 450px) {
+  form {
+    padding: 10px;   
+  }
+  form input,
+  form textarea,
+  form select,
+  form button {
+    padding: 8px;   
+  }
+}
+
+
 
 
