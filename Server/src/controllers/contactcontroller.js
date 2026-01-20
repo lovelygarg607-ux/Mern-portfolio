@@ -9,19 +9,12 @@ const contactcontroller = async (req, res) => {
     try {
         const { name,email,subject,message } = req.body;
 
-        if ([name,email,subject,message ].some((field) => {
-            field.trim() === ""
-        }
-        ))
-
-            return res.status(200).send(
-                {
-                    message: "All field are required",
-                    status: "not success"
-                }
-            )
-
-
+     if ([name, email, subject, message].some(field => !field || field.trim() === "")) {
+  return res.status(400).send({
+    message: "All fields are required",
+    status: "not success"
+  });
+}
       
 
         const contact = await Contactmodel.create(
