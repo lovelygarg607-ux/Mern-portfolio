@@ -14,8 +14,10 @@ const app = express();
 
  app.use(cors({
     origin: [
-     "http://localhost:5000",
-     "https://mern-portfolio-d3xy.onrender.com"
+    "http://localhost:3000",              
+    "http://localhost:5000",             
+    "https://mern-portfolio-d3xy.onrender.com", 
+    "https://mern-portfolio-ua14.vercel.app"
      ],
   credentials: true
   
