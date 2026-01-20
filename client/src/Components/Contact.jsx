@@ -42,7 +42,7 @@ const Contact = () => {
  try {
   const contactresponse = await axios.post(
     "https://mern-portfolio-d3xy.onrender.com/portfolio/contact/message",
-    formValue,
+    formValue
   
   );
 
