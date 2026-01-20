@@ -87,7 +87,7 @@ const TechnicalSkill = () => {
   `https://mern-portfolio-d3xy.onrender.com/portfolio/skill/getskillslist?page=${currentpage}&limit=${limit}`
 );
 
-    const res = await axios.get(query);
+
 
     if (res.data.status === "success") {
       setskills(res.data.skills);          
