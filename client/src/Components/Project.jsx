@@ -20,9 +20,8 @@ const Projects = () => {
   const getProjectList = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        `/portfolio/project/getprojectlist?page=${currentPage}&limit=${limit}`
-      );
+      
+    
 
       if (data.status === "success") {
         setProjects(data.projects);
