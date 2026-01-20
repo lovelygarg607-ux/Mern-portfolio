@@ -40,9 +40,10 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const contactresponse = await axios.post(
-        "/portfolio/contact/message",
-        formValue,
+     axios.post(
+  "https://mern-portfolio-d3xy.onrender.com/portfolio/contact/message",
+  formData
+);
         {
            headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
