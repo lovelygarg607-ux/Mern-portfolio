@@ -43,11 +43,11 @@ const Contact = () => {
   const contactresponse = await axios.post(
     "https://mern-portfolio-d3xy.onrender.com/portfolio/contact/message",
     formData,
-    {
-      headers: {
-        "Content-Type": "application/json"
+      {
+   headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  }
       }
-    }
   );
 
       if (contactresponse.data.status === "success") {
