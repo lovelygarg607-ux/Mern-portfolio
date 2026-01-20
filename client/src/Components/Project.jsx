@@ -20,6 +20,10 @@ const Projects = () => {
   const getProjectList = async () => {
     try {
       setLoading(true);
+        const data = await axios.get(
+  `https://mern-portfolio-d3xy.onrender.com/portfolio/project/getprojectlist?page=${currentpage}&limit=${limit}`
+);
+
       
     
 
