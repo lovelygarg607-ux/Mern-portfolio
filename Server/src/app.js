@@ -13,7 +13,12 @@ import skillrouter from "./route/skillroute.js";
 const app = express();
 
  app.use(cors({
-    origin: "http://localhost:5000",
+    origin: [
+     "http://localhost:5000",
+     "https://mern-portfolio-d3xy.onrender.com"
+     ],
+  credentials: true
+  
  }))
 
 
