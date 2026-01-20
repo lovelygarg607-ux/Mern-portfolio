@@ -20,17 +20,15 @@ const Projects = () => {
   const getProjectList = async () => {
     try {
       setLoading(true);
-        const data = await axios.get(
-  `https://mern-portfolio-d3xy.onrender.com/portfolio/project/getprojectlist?page=${currentpage}&limit=${limit}`
+     const res = await axios.get(
+  `https://mern-portfolio-d3xy.onrender.com/portfolio/project/getprojectlist?page=${currentPage}&limit=${limit}`
 );
 
-      
-    
+if (res.data.status === "success") {
+  setProjects(res.data.projects);
+  setTotalRecords(res.data.totalRecords);
+}
 
-      if (data.status === "success") {
-        setProjects(data.projects);
-        setTotalRecords(data.totalrecords);
-      }
     } catch (error) {
       console.log("Project fetch error:", error);
     } finally {
