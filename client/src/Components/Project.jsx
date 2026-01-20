@@ -72,7 +72,7 @@ if (res.data.status === "success") {
         title={project.title}
         description={project.description}
         tags={project.techStack}
-        imgURL={`https://mern-portfolio-d3xy.onrender.com/${project.projectimage}`}
+        imgURL={project.projectimage}
         github={project.githubLink}
       />
     </motion.div>
