@@ -60,20 +60,25 @@ if (res.data.status === "success") {
       </motion.div>
 
       {/* Cards */}
-      <motion.div className="projects-grid">
-        {projects.map((project, i) => (
-          <motion.div key={project._id} variants={fadeUp}>
-            <Projectcard
-              title={project.title}
-              description={project.description}
-              tags={project.techStack}
-              imgURL={project.projectimage}
-                github={project.githubLink}  
+     <motion.div
+  className="projects-grid"
+  initial="hidden"
+  animate="visible"
+>
+  {projects.map((project, i) => (
+    <motion.div key={project._id} variants={fadeUp}>
+      <Projectcard
+        index={i}
+        title={project.title}
+        description={project.description}
+        tags={project.techStack}
+        imgURL={`https://mern-portfolio-d3xy.onrender.com/${project.projectimage}`}
+        github={project.githubLink}
+      />
+    </motion.div>
+  ))}
+</motion.div>
 
-            />
-          </motion.div>
-        ))}
-      </motion.div>
 
       {/* Pagination */}
       <Pagination
