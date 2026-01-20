@@ -112,7 +112,14 @@ const Contact = () => {
               </div>
 
               <input type="text" placeholder="Subject" name="subject" onChange={handelChange} value={formValue.subject} required />
-                      <input type="text" placeholder="Message" name="message" onChange={handelChange} value={formValue.message} required />
+            <textarea
+  placeholder="Message"
+  name="message"
+  onChange={handelChange}
+  value={formValue.message}
+  required
+/>
+
               <button>Send Message</button>
             </form>
           </div>
