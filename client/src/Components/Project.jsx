@@ -14,8 +14,9 @@ const Projects = () => {
   const [loading, setLoading] = useState(false);
   const [limit, setLimit] = useState(3);
   const [projects, setProjects] = useState([]);
-  const [totalRecords, setTotalRecords] = useState(0);
+  const [totalproject, setTotalproject] = useState();
   const [currentPage, setCurrentPage] = useState(1);
+  const[totalpages , setTotalpages]=useState("")
 
   const getProjectList = async () => {
     try {
@@ -26,7 +27,8 @@ const Projects = () => {
 
 if (res.data.status === "success") {
   setProjects(res.data.projects);
-  setTotalRecords(res.data.totalRecords);
+  setTotalpages(res.data.totalpages);
+  setTotalproject(res.data.totalproject);
 }
 
     } catch (error) {
@@ -35,6 +37,10 @@ if (res.data.status === "success") {
       setLoading(false);
     }
   };
+
+  const onchange=(page,pageSize)=>{
+    setCurrentPage(page);
+    setlimit(pageSize);
 
   useEffect(() => {
     getProjectList();
@@ -85,7 +91,7 @@ if (res.data.status === "success") {
       <Pagination
         current={currentPage}
         pageSize={limit}
-        total={totalRecords}
+        total={totalproject}
         onChange={(page, pageSize) => {
           setCurrentPage(page);
           setLimit(pageSize);
