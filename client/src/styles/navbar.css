@@ -21,7 +21,7 @@ body {
 }
 
 .navbar.show {
-    animation: slideDown 0.8s ease forwards;
+    animation: none
 }
 
 
