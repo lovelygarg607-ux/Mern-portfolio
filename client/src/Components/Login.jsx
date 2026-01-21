@@ -44,7 +44,7 @@ const Login = () => {
 
     try {
       const loginresponse = await axios.post(
-        "/portfolio/admin/login",
+     "https://mern-portfolio-d3xy.onrender.com/portfolio/admin/login",
         formvalue,
           {
           headers: {
@@ -54,7 +54,7 @@ const Login = () => {
 
       );
 
-      // SUCCESS
+
       if (loginresponse.data.status === "success") {
         localStorage.setItem("token", loginresponse.data.token);
 
