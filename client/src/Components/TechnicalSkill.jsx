@@ -138,7 +138,7 @@ const onchange = (page, pageSize) => {
             viewport={{ once: true }}
           >
 
-            {/* TOP: ICON + NAME */}
+         
             <div className="skill-top">
               <img
                 src={skill.iconimage}
