@@ -35,6 +35,11 @@ const Projects = () => {
       setLoading(false);
     }
   };
+  const onchange = (page, pageSize) => {
+  setCurrentPage(page);
+  setlimit(pageSize);
+};
+
 
 
   useEffect(() => {
