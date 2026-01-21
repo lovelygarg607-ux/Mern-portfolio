@@ -85,13 +85,16 @@ const Projects = () => {
         ))}
       </motion.div>
 
-  <Pagination
-  current={currentPage}
+ <Pagination
+  showQuickJumper
+  pageSizeOptions={[4, 8, 12, 20]}
+  current={currentpage}
   pageSize={limit}
   total={totalproject}
-  onChange={(page) => setCurrentPage(page)}
   style={{ marginTop: 20, textAlign: "center" }}
+  onChange={onchange}
 />
+
 
     </section>
   );
