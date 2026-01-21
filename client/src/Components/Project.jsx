@@ -12,7 +12,7 @@ const fadeUp = {
 
 const Projects = () => {
   const [loading, setLoading] = useState(false);
-  const [limit, setLimit] = useState(4);
+  const [limit, setLimit] = useState(3);
   const [projects, setProjects] = useState([]);
   const [totalproject, setTotalproject] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
