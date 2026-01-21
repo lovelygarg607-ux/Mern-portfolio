@@ -14,23 +14,21 @@ const Projects = () => {
   const [loading, setLoading] = useState(false);
   const [limit, setLimit] = useState(3);
   const [projects, setProjects] = useState([]);
-  const [totalproject, setTotalproject] = useState();
+  const [totalproject, setTotalproject] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const[totalpages , setTotalpages]=useState("")
 
   const getProjectList = async () => {
     try {
       setLoading(true);
-     const res = await axios.get(
-  `https://mern-portfolio-d3xy.onrender.com/portfolio/project/getprojectlist?page=${currentPage}&limit=${limit}`
-);
 
-if (res.data.status === "success") {
-  setProjects(res.data.projects);
-  setTotalpages(res.data.totalpages);
-  setTotalproject(res.data.totalproject);
-}
+      const res = await axios.get(
+        `https://mern-portfolio-d3xy.onrender.com/portfolio/project/getprojectlist?page=${currentPage}&limit=${limit}`
+      );
 
+      if (res.data.status === "success") {
+        setProjects(res.data.projects);
+        setTotalproject(res.data.totalproject);
+      }
     } catch (error) {
       console.log("Project fetch error:", error);
     } finally {
@@ -38,9 +36,6 @@ if (res.data.status === "success") {
     }
   };
 
-  const onchange=(page,pageSize)=>{
-    setCurrentPage(page);
-    setlimit(pageSize);
 
   useEffect(() => {
     getProjectList();
@@ -48,7 +43,7 @@ if (res.data.status === "success") {
 
   return (
     <section id="projects" className="projects-section">
-      {/* Heading */}
+   
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -65,29 +60,27 @@ if (res.data.status === "success") {
         </motion.p>
       </motion.div>
 
-      {/* Cards */}
-     <motion.div
-  className="projects-grid"
-  initial="hidden"
-  animate="visible"
->
-  {projects.map((project, i) => (
-    <motion.div key={project._id} variants={fadeUp}>
-      <Projectcard
-        index={i}
-        title={project.title}
-        description={project.description}
-        tags={project.techStack}
-        imgURL={project.projectimage}
+    
+      <motion.div
+        className="projects-grid"
+        initial="hidden"
+        animate="visible"
+      >
+        {projects.map((project, i) => (
+          <motion.div key={project._id} variants={fadeUp}>
+            <Projectcard
+              index={i}
+              title={project.title}
+              description={project.description}
+              tags={project.techStack}
+              imgURL={project.projectimage}
+              github={project.githubLink}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
 
-        github={project.githubLink}
-      />
-    </motion.div>
-  ))}
-</motion.div>
-
-
-      {/* Pagination */}
+   
       <Pagination
         current={currentPage}
         pageSize={limit}
