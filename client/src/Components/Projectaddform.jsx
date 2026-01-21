@@ -71,13 +71,9 @@ import { useNavigate } from "react-router-dom";
             formdata.append("projectimage", projectimage);
 
             const projectresponse = await axios.post(
-                "/portfolio/project/addproject",
+                 "https://mern-portfolio-d3xy.onrender.com/portfolio/project/addproject",
                 formdata,
-                {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                }
+              
             );
 
             if (projectresponse.data.status === "success") {
