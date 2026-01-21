@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../styles/navbar.css";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(true);
-  }, []);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -15,9 +10,8 @@ const Navbar = () => {
     }
   };
 
-
   return (
-    <header className={`navbar ${show ? "show" : ""}`}>
+    <header className="navbar">
       <div className="nav-inner">
 
         <div className="logo">
@@ -26,21 +20,11 @@ const Navbar = () => {
         </div>
 
         <ul className="nav-links">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <button
@@ -56,6 +40,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 
