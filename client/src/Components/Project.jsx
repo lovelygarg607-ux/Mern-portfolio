@@ -35,12 +35,11 @@ const Projects = () => {
       setLoading(false);
     }
   };
-  const onchange = (page, pageSize) => {
-  setCurrentPage(page);
-  setlimit(pageSize);
-};
 
-
+  const onChange = (page, pageSize) => {
+    setCurrentPage(page);
+    setLimit(pageSize); // Fixed typo
+  };
 
   useEffect(() => {
     getProjectList();
@@ -48,7 +47,6 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-   
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -65,12 +63,7 @@ const Projects = () => {
         </motion.p>
       </motion.div>
 
-    
-      <motion.div
-        className="projects-grid"
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="projects-grid" initial="hidden" animate="visible">
         {projects.map((project, i) => (
           <motion.div key={project._id} variants={fadeUp}>
             <Projectcard
@@ -85,19 +78,18 @@ const Projects = () => {
         ))}
       </motion.div>
 
- <Pagination
-  showQuickJumper
-  pageSizeOptions={[4, 8, 12, 20]}
-  current={currentpage}
-  pageSize={limit}
-  total={totalproject}
-  style={{ marginTop: 20, textAlign: "center" }}
-  onChange={onchange}
-/>
-
-
+      <Pagination
+        showQuickJumper
+        pageSizeOptions={[4, 8, 12, 20]}
+        current={currentPage} // Fixed typo
+        pageSize={limit}
+        total={totalproject}
+        style={{ marginTop: 20, textAlign: "center" }}
+        onChange={onChange} // Fixed name
+      />
     </section>
   );
 };
 
 export default Projects;
+
