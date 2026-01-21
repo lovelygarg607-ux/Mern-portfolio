@@ -80,17 +80,14 @@ const Projects = () => {
         ))}
       </motion.div>
 
-   
-      <Pagination
-        current={currentPage}
-        pageSize={limit}
-        total={totalproject}
-        onChange={(page, pageSize) => {
-          setCurrentPage(page);
-          setLimit(pageSize);
-        }}
-        style={{ marginTop: 20, textAlign: "center" }}
-      />
+  <Pagination
+  current={currentPage}
+  pageSize={limit}
+  total={totalproject}
+  onChange={(page) => setCurrentPage(page)}
+  style={{ marginTop: 20, textAlign: "center" }}
+/>
+
     </section>
   );
 };
