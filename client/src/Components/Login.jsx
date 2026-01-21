@@ -46,12 +46,6 @@ const Login = () => {
       const loginresponse = await axios.post(
      "https://mern-portfolio-d3xy.onrender.com/portfolio/admin/login",
         formvalue,
-          {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        }
-
       );
 
 
