@@ -69,11 +69,7 @@ const Skilladdform = () => {
             const skillresponse = await axios.post(
                  "https://mern-portfolio-d3xy.onrender.com/portfolio/skill/addskill",
                 formdata,
-                {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                }
+              
             );
 
             if (skillresponse.data.status === "success") {
