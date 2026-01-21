@@ -90,16 +90,15 @@ const Home = () => {
                 </button>
 
 
-                <a
-                  href="/resume.pdf"
-                  download
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  <Download size={16} />
-                  Download Resume
-                </a>
+             <a
+     href="/resume.pdf"
+    target="_blank"
+   rel="noopener noreferrer"
+   className="btn-primary"
+>
+   <Download size={16} /> Open/Download Resume
+ </a>
+
 
 
 
