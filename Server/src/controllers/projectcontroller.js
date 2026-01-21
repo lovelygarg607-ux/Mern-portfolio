@@ -92,46 +92,34 @@ const addprojectcontroller = async (req, res) => {
 
 
 const getprojectlist = async (req, res) => {
-    try {
+  try {
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 3;
 
-        const page = req.query.page
-        const limit = req.query.limit || 10
+    const pageskip = (page - 1) * limit;
 
+    const projects = await projectmodel
+      .find()
+      .sort({ createdAt: -1 }) 
+      .skip(pageskip)
+      .limit(limit);
 
-        const pageskip = (page - 1) * limit
+    const total = await projectmodel.countDocuments();
 
+    res.status(200).send({
+      status: "success",
+      totalproject: total,
+      projects
+    });
 
-        const projects = await projectmodel.find().skip(pageskip).limit(limit)
-        const total = await projectmodel.countDocuments()
+  } catch (error) {
+    res.status(500).send({
+      message: `project list error ${error}`,
+      status: "failed"
+    });
+  }
+};
 
-        res.status(200).send(
-            {
-                status: "success",
-                totalpages: Math.ceil(total / limit),
-                currentPage: page,
-                totalrecords: total,
-                projects
-            }
-        )
-
-    } catch (error) {
-
-
-        res.status(500).send(
-            {
-                mesage: `project list error ${error}`,
-                status: "failed"
-            }
-        )
-    }
-
-
-
-
-
-
-
-}
 
 
 
