@@ -67,7 +67,7 @@ const Skilladdform = () => {
             formdata.append("iconimage", iconimage);
 
             const skillresponse = await axios.post(
-                "/portfolio/skill/addskill",
+                 "https://mern-portfolio-d3xy.onrender.com/portfolio/skill/addskill",
                 formdata,
                 {
                     headers: {
