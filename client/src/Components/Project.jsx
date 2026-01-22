@@ -16,6 +16,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [totalproject, setTotalproject] = useState();
   const [currentPage, setCurrentPage] = useState(1);
+  const[totalpages,setTotalpages]=useState("");
 
   const getProjectList = async () => {
     try {
@@ -27,6 +28,7 @@ const Projects = () => {
 
       if (res.data.status === "success") {
         setProjects(res.data.projects);
+        setTotalpages(res.data.totalpages);
         
          setTotalproject(res.data.totalrecords); 
       }
