@@ -27,7 +27,7 @@ const Projects = () => {
 
       if (res.data.status === "success") {
         setProjects(res.data.projects);
-        setTotalproject(res.data.totalproject);
+      setTotalproject(res.data.totalProject);
       }
     } catch (error) {
       console.log("Project fetch error:", error);
@@ -38,7 +38,7 @@ const Projects = () => {
 
   const onChange = (page, pageSize) => {
     setCurrentPage(page);
-    setLimit(pageSize); // Fixed typo
+    setLimit(pageSize); 
   };
 
   useEffect(() => {
@@ -80,12 +80,12 @@ const Projects = () => {
 
       <Pagination
         showQuickJumper
-        pageSizeOptions={[4, 8, 12, 20]}
-        current={currentPage} // Fixed typo
+         pageSizeOptions={[3, 6, 9]}
+        current={currentPage} 
         pageSize={limit}
         total={totalproject}
         style={{ marginTop: 20, textAlign: "center" }}
-        onChange={onChange} // Fixed name
+        onChange={onChange} 
       />
     </section>
   );
