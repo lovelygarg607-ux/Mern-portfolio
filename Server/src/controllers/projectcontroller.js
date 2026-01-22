@@ -108,7 +108,7 @@ const getprojectlist = async (req, res) => {
 
     res.status(200).send({
       status: "success",
-      totalproject: total,
+      totalrecords: total,
       projects
     });
 
